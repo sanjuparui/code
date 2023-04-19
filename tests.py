@@ -696,3 +696,39 @@
 
 # avrage_finder = lambda *args:[sum(pair)/len(pair) for pair in zip(*args)]
 # print(avrage_finder(*l))
+
+# num1 = [2,4,6,8,10]
+# num2 = [1,2,3,4,5]
+
+# e= []
+# for i in num1:
+#     if i%2==0:
+#         e.append(True)
+# print(e)
+# e = [True for i in num2 if i%2==0]
+# e = [True if i%2==0 else False for i in num2]
+# e =lambda i:[True if i%2 == 0 else False for i in num2]
+# print (e(num2))
+# print(all([True if i%2==0 else False for i in num2]))
+# print(any([True if i%2==0 else False for i in num2]))
+
+student = [
+    {'name':'sanju', 'score':80, 'age':25},
+    {'name':'subho', 'score':85, 'age':23},
+    {'name':'tukai', 'score':90, 'age':24}
+]
+student2 = {
+    'sanju':{'score':80, 'age':25},
+    'subho':{ 'score':85, 'age':23},
+    'tukai':{ 'score':90, 'age':24}
+}
+name = ['sanju','tukaii','sub']
+def func(item):
+    return len(item)
+
+# print(max(name,key=func))
+# print(min(name,key=func))
+# print(max(name, key =lambda item: len(item)))
+print(max(student , key =lambda item: item.get('score'))['name'])
+print(min(student2 , key = lambda item : student2[item]['score']))
+
